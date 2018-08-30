@@ -51,6 +51,9 @@ list.appendChild(munroListItemMeaning);
 list.appendChild(munroListItemHeight);
 };
 
+// MunroView.prototype.clearMunro = function () {
+//   this.container.innerHTML = '';
+// };
 
 
 module.exports = MunroView;

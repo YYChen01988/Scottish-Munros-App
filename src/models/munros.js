@@ -11,6 +11,7 @@ PubSub.subscribe('SelectView:change', (event) => {
   const selectedIndex = event.detail;
   // console.log(event.detail);
   selectedRegion = this.regions[selectedIndex]
+  
  PubSub.publish('Munros:selected-region-ready', selectedRegion)
 });
 };

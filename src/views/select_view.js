@@ -9,13 +9,13 @@ SelectView.prototype.bindEvents = function () {
     // console.log(event.detail);
     this.populate(evt.detail)
   });
-//
+
   this.element.addEventListener('change', (evt) => {
     const selectedIndex = evt.target.value;
     PubSub.publish('SelectView:change', selectedIndex);
   })
 };
-//
+
 SelectView.prototype.populate = function (munros) {
   munros.forEach((munro, index) => {
     const munroOption = this.createOption(munro.name, index);

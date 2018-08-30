@@ -9,6 +9,8 @@ MunroListView.prototype.bindEvents = function (){
   PubSub.subscribe('Munros:selected-region-ready', (event) => {
     this.regions = event.detail;
     // console.log(this.munros);
+    const munroListViewContianer = document.querySelector('#munros');
+    munroListViewContianer.innerHTML = '';
     this.render();
   });
 };
